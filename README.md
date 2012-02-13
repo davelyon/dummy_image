@@ -24,10 +24,10 @@ Or install it yourself as:
 
 This is a rack app that responds to the following URLS:
 
-	/width.(format)
-	/width/height.(format)
-	/width/height/foreground.(format)
-	/width/height/foreground/background.(format)
+	/height.(format)
+	/height/width.(format)
+	/height/width/foreground.(format)
+	/height/width/foreground/background.(format)
 
 Where *mount* is the location where the app is mounted
 
