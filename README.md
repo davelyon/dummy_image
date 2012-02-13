@@ -26,8 +26,8 @@ This is a rack app that responds to the following URLS:
 
 	/width.(format)
 	/width/height.(format)
-	/width/height/background.(format)
-	/width/height/background/foreground.(format)
+	/width/height/foreground.(format)
+	/width/height/foreground/background.(format)
 
 Where *mount* is the location where the app is mounted
 
