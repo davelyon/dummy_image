@@ -9,10 +9,6 @@ module DummyImage
       valid_format @format
     end
 
-    def image
-      File.basename Image.find(width, height, bgcolor, fgcolor, format).path
-    end
-
     def height
       @height ||= valid_size(arguments[0]) || "300"
     end
