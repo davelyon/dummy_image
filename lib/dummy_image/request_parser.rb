@@ -14,19 +14,19 @@ module DummyImage
     end
 
     def height
-      @height ||= arguments[0] || "300"
+      @height ||= valid_size(arguments[0]) || "300"
     end
 
     def width
-      @width ||= arguments[1] || height
+      @width ||= valid_size(arguments[1]) || height
     end
 
     def fgcolor
-      @fgcolor ||= arguments[2] || "333333"
+      @fgcolor ||= valid_color(arguments[2]) || "333333"
     end
 
     def bgcolor
-      @bgcolor ||= arguments[3] || "CCCCCC"
+      @bgcolor ||= valid_color(arguments[3]) || "CCCCCC"
     end
 
     private
@@ -41,6 +41,14 @@ module DummyImage
       else
         "png"
       end
+    end
+
+    def valid_size size
+      size[/^\d+$/] if size
+    end
+
+    def valid_color color
+      color[/^[\da-fA-F]+$/] if color
     end
   end
 end

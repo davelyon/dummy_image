@@ -60,4 +60,12 @@ describe DummyImage::RequestParser do
     its(:bgcolor) { should == "505050" }
     its(:format) { should == "png" }
   end
+
+  context "with invalid data" do
+    let(:path) { "/wut/who/waaa/derp" }
+    its(:height) { should == "300" }
+    its(:width) { should == "300" }
+    its(:fgcolor) { should == "333333" }
+    its(:bgcolor) { should == "CCCCCC" }
+  end
 end
