@@ -29,8 +29,6 @@ This is a rack app that responds to the following URLS:
 	/height/width/foreground.(format)
 	/height/width/foreground/background.(format)
 
-Where *mount* is the location where the app is mounted
-
 ## Rails Usage
 
 In your config/routes.rb add:
