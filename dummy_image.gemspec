@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "http://davelyon.net"
 
   gem.executables   = []
-  gem.files         = Dir.glob['lib/**/*.rb'] + %w(README.md)
+  gem.files         = Dir.glob('lib/**/*.rb') + %w(README.md)
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "dummy_image"
   gem.require_paths = ["lib"]
